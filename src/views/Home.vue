@@ -1,8 +1,6 @@
 <template>
   <section class="container">
-    <div class="header">
-      <Header />
-    </div>
+    <div class="header"></div>
     <div class="home">
       <div class="home__text">
         <h1 class="home__text__h1">
@@ -23,21 +21,27 @@
       </div>
     </div>
     <Listen />
-
     <Courses />
+    <Benefits />
+    <Depoiments />
+    <Faq />
   </section>
 </template>
 
 <script>
-import Header from "@/components/Header";
+import Faq from "@/components/Home/Faq";
 import Listen from "@/components/Home/Listen";
 import Courses from "@/components/Home/Courses";
+import Benefits from "@/components/Home/Benefits";
+import Depoiments from "@/components/Home/Depoiments";
 
 export default {
   components: {
-    Header,
+    Faq,
     Listen,
     Courses,
+    Benefits,
+    Depoiments,
   },
 };
 </script>

@@ -1,6 +1,8 @@
 <template>
-  <div class="header">
-    <img src="@/assets/edtech.svg" />
+  <div class="container">
+    <div class="header">
+      <img src="@/assets/edtech.svg" />
+    </div>
   </div>
 </template>
 

@@ -1,33 +1,30 @@
 <template>
-  <div class="courses">
-    <div class="courses__content">
-      <div class="courses__content__text">
-        <h2>Cursos em aberto</h2>
-        <p>
-          Cursos e conteúdo para você se capacitar em tecnologia e negócios
-          digitais.
-        </p>
+  <div class="depoiments">
+    <div class="depoiments__content">
+      <div class="depoiments__content__text">
+        <h2>Depoimentos</h2>
+        <p>Velit officia consequat duis enim velit mollit.</p>
       </div>
-      <div class="courses__content__cards">
-        <Cards />
-        <Cards />
-        <Cards />
+      <div class="depoiments__content__carousel">
+        <Carousel />
+        <Carousel />
+        <Carousel />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Cards from "./Cards";
+import Carousel from "./Carousel";
 export default {
   components: {
-    Cards,
+    Carousel,
   },
 };
 </script>
 
 <style lang="scss">
-.courses {
+.depoiments {
   display: flex;
   max-width: 1170px;
   margin: 0 auto;
@@ -37,6 +34,7 @@ export default {
     width: 100%;
     &__text {
       width: 320px;
+
       h2 {
         color: var(--color-white);
         font-family: Inter;
@@ -55,7 +53,7 @@ export default {
         color: var(--color-light-silver);
       }
     }
-    &__cards {
+    &__carousel {
       display: flex;
       margin-top: 50px;
       width: 100%;
