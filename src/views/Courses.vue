@@ -2,7 +2,9 @@
   <div>
     <div class="container">
       <div class="courses__nav">
-        <p>Edtech > Nossos cursos > Flutter</p>
+        <p>
+          Edtech > <router-link to="/">Nossos cursos </router-link>> Flutter
+        </p>
       </div>
       <div class="courses__flutter">
         <div class="courses__flutter__top">

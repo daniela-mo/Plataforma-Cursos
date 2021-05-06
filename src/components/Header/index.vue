@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="header">
-      <img src="@/assets/edtech.svg" />
+      <router-link to="/"> <img src="@/assets/edtech.svg"/></router-link>
     </div>
   </div>
 </template>

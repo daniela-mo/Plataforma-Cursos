@@ -6,9 +6,7 @@
         <p>Velit officia consequat duis enim velit mollit.</p>
       </div>
       <div class="depoiments__content__carousel">
-        <Carousel />
-        <Carousel />
-        <Carousel />
+        <Carousel :commit="commitMap" />
       </div>
     </div>
   </div>
@@ -16,9 +14,23 @@
 
 <script>
 import Carousel from "./Carousel";
+import commit from "@/util/commit";
 export default {
   components: {
     Carousel,
+  },
+
+  data: () => ({
+    commitMap: [],
+  }),
+  beforeMount() {
+    this.fetch();
+  },
+  methods: {
+    fetch() {
+      const commitMap = commit;
+      this.commitMap = commitMap;
+    },
   },
 };
 </script>

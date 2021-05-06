@@ -13,9 +13,7 @@
         </div>
       </div>
       <div class="courses__content__cards">
-        <Cards />
-        <Cards />
-        <Cards />
+        <Cards :courses="cursosMap" />
       </div>
     </div>
   </div>
@@ -23,9 +21,23 @@
 
 <script>
 import Cards from "./Cards";
+import cursos from "@/util/cursos";
 export default {
   components: {
     Cards,
+  },
+
+  data: () => ({
+    cursosMap: [],
+  }),
+  beforeMount() {
+    this.fetch();
+  },
+  methods: {
+    fetch() {
+      const cursosMap = cursos;
+      this.cursosMap = cursosMap;
+    },
   },
 };
 </script>

@@ -1,34 +1,53 @@
 <template>
-  <div class="card">
-    <div class="card__top">
-      <div class="card__top__text">
-        <div class="card__top__text__mobile">
-          <h3>MOBILE</h3>
+  <div class="item-content">
+    <div v-for="item in courses" :key="item.id" class="card">
+      <div class="card__top">
+        <div class="card__top__text">
+          <div class="card__top__text__mobile">
+            <h3>{{ item.type }}</h3>
+          </div>
+          <div class="card__top__text__flutter">
+            <span>{{ item.name }}</span>
+          </div>
         </div>
-        <div class="card__top__text__flutter">
-          <span>Flutter</span>
+        <div>
+          <img src="@/assets/ilustracao_flutter.svg" />
         </div>
       </div>
-      <div>
-        <img src="@/assets/ilustracao_flutter.svg" />
-      </div>
-    </div>
 
-    <div class="card__bottom">
-      <div class="card__bottom__date">
-        <span>08/03 a 29/03</span>
-      </div>
-      <div class="card__bottom__p">
-        <p>Crie e valide formulários para validar conversões</p>
-      </div>
-      <div>
-        <button class="card__bottom__button">IR PARA O CURSO</button>
+      <div class="card__bottom">
+        <div class="card__bottom__date">
+          <span>{{ item.start }} a {{ item.end }}</span>
+        </div>
+        <div class="card__bottom__p">
+          <p>{{ item.description }}</p>
+        </div>
+        <div class="card__bottom__button">
+          <router-link :to="`/courses/${item.useId}`"
+            >IR PARA O CURSO</router-link
+          >
+        </div>
       </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    courses: Array,
+  },
+};
+</script>
+
 <style lang="scss">
+.item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1170px;
+}
 .card {
   width: 364px;
   height: 510px;
@@ -99,13 +118,17 @@
       }
     }
     &__button {
-      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
       padding: 10px;
       width: 154px;
       height: 49px;
       font-weight: 600;
       font-size: 14px;
       background: #fcc419;
+      text-decoration: none;
       border-radius: 8px;
       border: none;
     }
