@@ -33,7 +33,7 @@ export default {
   margin: 0 auto;
   width: 100%;
   &__content {
-    margin-top: 20px;
+    margin-top: 60px;
     width: 100%;
     &__text {
       width: 320px;

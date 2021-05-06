@@ -1,6 +1,5 @@
 <template>
   <section class="container">
-    <div class="header"></div>
     <div class="home">
       <div class="home__text">
         <h1 class="home__text__h1">

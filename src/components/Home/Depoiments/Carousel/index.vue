@@ -24,7 +24,7 @@
 
 <style lang="scss">
 .carousel {
-  width: 384px;
+  width: 364px;
   height: 306px;
   background: #212125;
   border-radius: 8px;

@@ -52,6 +52,7 @@
         height: 72px;
         background: #141313;
         border-radius: 50px;
+        margin-right: 30px;
 
         img {
           width: 32px;
@@ -71,7 +72,7 @@
           color: #ffffff;
         }
         p {
-          font-family: Helvetica;
+          font-family: Inter;
           font-style: normal;
           font-weight: normal;
           font-size: 14px;
