@@ -62,6 +62,7 @@
       &__text {
         width: 190px;
         flex-wrap: wrap;
+        line-height: 200%;
 
         span {
           font-family: Inter;

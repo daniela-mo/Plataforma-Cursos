@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="container">
-      <nav class="courses__nav">
-        <div>Edtech > Nossos cursos > Flutter</div>
-      </nav>
-      <div class="courses">
-        <div class="courses__top">
-          <div class="courses__top__text">
+      <div class="courses__nav">
+        <p>Edtech > Nossos cursos > Flutter</p>
+      </div>
+      <div class="courses__flutter">
+        <div class="courses__flutter__top">
+          <div class="courses__flutter__top__text">
             <p>Curso de 08/03 a 29/03</p>
 
             <h2>
@@ -20,13 +20,13 @@
               objetivos.
             </p>
             <div>
-              <button class="courses__top__button">
+              <button class="courses__flutter__top__button">
                 VER CONTEÚDO DO CURSO
               </button>
             </div>
           </div>
 
-          <div class="courses__top__img">
+          <div class="courses__flutter__top__img">
             <img src="@/assets/ilustracao_flutter.svg" />
           </div>
         </div>
@@ -62,27 +62,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.courses {
+.courses__nav {
   display: flex;
   max-width: 1170px;
-  padding: 80px 0;
+  padding: 40px 0;
   margin: 0 auto;
   width: 100%;
-  &__nav {
-    display: flex;
-    max-width: 1170px;
-    padding: 50px 0;
-    margin: 0 auto;
-    width: 100%;
-    flex-direction: row;
-    color: var(--color-white);
-    border-bottom: 1px var(--color-gray-50) solid;
-  }
+  flex-direction: row;
+  color: var(--color-white);
+  border-bottom: 1px var(--color-gray-50) solid;
+}
+.courses__flutter {
+  display: flex;
+  max-width: 1170px;
+  padding: 40px 0;
+  margin: 0 auto;
+  width: 100%;
+
   &__top {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
+    padding-top: 5px;
     &__text {
       display: flex;
       flex-direction: column;

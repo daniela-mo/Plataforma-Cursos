@@ -31,22 +31,21 @@
 <style lang="scss">
 .card {
   width: 364px;
-  height: 540px;
+  height: 510px;
   background: #212125;
   border-radius: 8px;
   &__top {
     display: flex;
-    padding: 25px;
+    padding: 20px;
     justify-content: space-between;
     &__text {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+      padding-bottom: 20px;
       &__mobile {
         width: 62px;
-        height: 30px;
-        left: 136px;
-        top: 1440px;
+        height: 25px;
         background: #141313;
         border-radius: 2px;
         h3 {
@@ -77,7 +76,7 @@
     }
   }
   &__bottom {
-    padding: 25px;
+    padding: 0 25px;
     & {
       span {
         font-family: Inter;
@@ -94,13 +93,13 @@
         font-family: Inter;
         font-style: normal;
         font-weight: normal;
-        font-size: 19px;
+        font-size: 22px;
         line-height: 150%;
         color: #bcbcbc;
       }
     }
     &__button {
-      margin-top: 50px;
+      margin-top: 30px;
       padding: 10px;
       width: 154px;
       height: 49px;

@@ -2,14 +2,16 @@
   <section class="container">
     <div class="home">
       <div class="home__text">
-        <h1 class="home__text__h1">
-          Aprenda novas habilidades e avance sua carreira
-        </h1>
-
-        <p class="home__text__p">
-          Expanda suas oportunidades e acelere na direção dos seus objetivos.
-        </p>
-
+        <div class="home__text__h1">
+          <h1>
+            Aprenda novas habilidades e avance sua carreira
+          </h1>
+        </div>
+        <div class="home__text__p">
+          <p>
+            Expanda suas oportunidades e acelere na direção dos seus objetivos.
+          </p>
+        </div>
         <button class="home__text__button">
           CONHEÇA NOSSOS CURSOS
         </button>
@@ -45,24 +47,35 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .home {
   display: flex;
+  justify-content: space-between;
   max-width: 1170px;
   padding: 80px 0;
   margin: 0 auto;
+
   &__text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-top: 90px;
     &__h1 {
-      color: var(--color-white);
-      font-weight: 700;
-      font-size: 48px;
+      width: 500px;
+      h1 {
+        color: var(--color-white);
+        font-weight: 700;
+        font-size: 48px;
+      }
     }
     &__p {
-      color: var(--color-white);
-      margin-top: 20px;
+      width: 450px;
+      margin-top: 25px;
+      p {
+        color: var(--color-white);
+        font-family: Inter;
+        font-size: 24px;
+      }
     }
     &__button {
       background: var(--color-button);
@@ -75,7 +88,12 @@ export default {
     }
   }
   &__img {
-    justify-content: space-between;
+    width: 582px;
+    height: 495px;
+    img {
+      width: 582px;
+      height: 495px;
+    }
   }
 }
 </style>

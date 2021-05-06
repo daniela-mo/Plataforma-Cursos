@@ -40,7 +40,7 @@ export default {
         font-family: Inter;
         font-style: bold;
         line-height: 48px;
-        font-size: 35px;
+        font-size: 40px;
       }
 
       p {
@@ -48,7 +48,7 @@ export default {
         color: var(--color-white);
         font-family: Inter;
         font-style: normal;
-        line-height: 25px;
+        line-height: 24px;
         font-size: 16px;
         color: var(--color-light-silver);
       }

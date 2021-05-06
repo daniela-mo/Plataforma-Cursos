@@ -2,11 +2,15 @@
   <div class="courses">
     <div class="courses__content">
       <div class="courses__content__text">
-        <h2>Cursos em aberto</h2>
-        <p>
-          Cursos e conteúdo para você se capacitar em tecnologia e negócios
-          digitais.
-        </p>
+        <div>
+          <h2>Cursos em aberto</h2>
+        </div>
+        <div class="courses__content__text__p">
+          <p>
+            Cursos e conteúdo para você se capacitar em tecnologia e negócios
+            digitais.
+          </p>
+        </div>
       </div>
       <div class="courses__content__cards">
         <Cards />
@@ -36,23 +40,25 @@ export default {
     margin-top: 60px;
     width: 100%;
     &__text {
-      width: 320px;
+      width: 360px;
       h2 {
         color: var(--color-white);
         font-family: Inter;
         font-style: bold;
         line-height: 48px;
-        font-size: 35px;
+        font-size: 40px;
       }
-
-      p {
-        margin-top: 10px;
-        color: var(--color-white);
-        font-family: Inter;
-        font-style: normal;
-        line-height: 25px;
-        font-size: 16px;
-        color: var(--color-light-silver);
+      &__p {
+        width: 500px;
+        p {
+          margin-top: 10px;
+          color: var(--color-white);
+          font-family: Inter;
+          font-style: normal;
+          line-height: 25px;
+          font-size: 24px;
+          color: var(--color-light-silver);
+        }
       }
     }
     &__cards {
