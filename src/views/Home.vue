@@ -12,13 +12,13 @@
             Expanda suas oportunidades e acelere na direção dos seus objetivos.
           </p>
         </div>
-        <button class="home__text__button">
+        <router-link to="/courses" class="home__text__button">
           CONHEÇA NOSSOS CURSOS
-        </button>
+        </router-link>
       </div>
 
       <div class="home__img">
-        <img src="@/assets/figuras.svg" />
+        <img src="@/assets/figuras.png" />
       </div>
     </div>
     <Listen />
@@ -85,6 +85,7 @@ export default {
       margin-top: 20px;
       border: none;
       border-radius: 5px;
+      text-decoration: none;
     }
   }
   &__img {
