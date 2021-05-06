@@ -1,5 +1,5 @@
 <template>
-  <div class="item-content">
+  <div id="courses" class="item-content">
     <div v-for="item in courses" :key="item.id" class="card">
       <div class="card__top">
         <div class="card__top__text">
@@ -23,7 +23,9 @@
           <p>{{ item.description }}</p>
         </div>
         <div class="card__bottom__button">
-          <router-link :to="`/courses/${item.useId}`"
+          <router-link
+            style="text-decoration:none"
+            :to="`/courses/${item.useId}`"
             >IR PARA O CURSO</router-link
           >
         </div>
@@ -125,6 +127,7 @@ export default {
       padding: 10px;
       width: 154px;
       height: 49px;
+      color: #191820;
       font-weight: 600;
       font-size: 14px;
       background: #fcc419;

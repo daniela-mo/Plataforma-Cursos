@@ -12,9 +12,9 @@
             Expanda suas oportunidades e acelere na direção dos seus objetivos.
           </p>
         </div>
-        <router-link to="#Courses" class="home__text__button">
+        <a href="#courses" class="home__text__button">
           CONHEÇA NOSSOS CURSOS
-        </router-link>
+        </a>
       </div>
 
       <div class="home__img">

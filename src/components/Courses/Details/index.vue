@@ -1,5 +1,5 @@
 <template>
-  <div class="details">
+  <div id="content" class="details">
     <div class="details__title">
       <h2>Conteúdo detalhado do curso</h2>
     </div>

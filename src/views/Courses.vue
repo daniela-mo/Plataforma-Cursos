@@ -3,8 +3,12 @@
     <div class="container">
       <div class="courses__nav">
         <p>
-          Edtech > <router-link to="/">Nossos cursos </router-link>> Flutter
+          Edtech >
         </p>
+        <router-link to="/" class="courses__nav__back"
+          >Nossos cursos</router-link
+        >
+        <p>> Flutter</p>
       </div>
       <div class="courses__flutter">
         <div class="courses__flutter__top">
@@ -22,9 +26,9 @@
               objetivos.
             </p>
             <div>
-              <button class="courses__flutter__top__button">
+              <a href="#content" class="courses__flutter__top__button">
                 VER CONTEÚDO DO CURSO
-              </button>
+              </a>
             </div>
           </div>
 
@@ -73,11 +77,19 @@ export default {
   flex-direction: row;
   color: var(--color-white);
   border-bottom: 1px var(--color-gray-50) solid;
+  p {
+    margin-right: 8px;
+  }
+}
+.courses__nav__back {
+  margin-right: 8px;
+  text-decoration: none;
+  color: #fff;
 }
 .courses__flutter {
   display: flex;
   max-width: 1170px;
-  padding: 40px 0;
+  padding: 60px 0;
   margin: 0 auto;
   width: 100%;
 
@@ -120,12 +132,15 @@ export default {
       }
     }
     &__button {
+      display: flex;
+      align-items: flex-end;
       background: var(--color-button);
       color: var(--color-black);
       font-size: 12px;
       padding: 14px 10px;
       margin-top: 20px;
       border: none;
+      text-decoration: none;
       border-radius: 5px;
     }
     &__img {
