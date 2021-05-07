@@ -54,7 +54,7 @@ export default {
   max-width: 1170px;
   padding: 80px 0;
   margin: 0 auto;
-
+  width: 100%;
   &__text {
     display: flex;
     flex-direction: column;

@@ -21,17 +21,24 @@
 
 <script>
 import Cards from "./Cards";
-import cursos from "@/util/cursos";
+import cursos from "@/uteis/cursos";
 export default {
   components: {
     Cards,
   },
-
+  asyncData({ params }) {
+    console.log(params);
+    return {
+      id: String(params.id),
+    };
+  },
   data: () => ({
     cursosMap: [],
   }),
   beforeMount() {
     this.fetch();
+
+    console.log(cursos);
   },
   methods: {
     fetch() {

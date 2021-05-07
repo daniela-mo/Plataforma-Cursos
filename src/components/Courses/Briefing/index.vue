@@ -7,11 +7,11 @@
       <div class="briefing__class">
         <div class="briefing__class__items">
           <img src="@/assets/clock.svg" />
-          16H Aula
+          <p>16H Aula</p>
         </div>
         <div class="briefing__class__items">
           <img src="@/assets/youtube.svg" />
-          6 Vídeos
+          <p>6 Vídeos</p>
         </div>
         <div class="briefing__class__items">
           <img src="@/assets/book-open.svg" />
@@ -75,12 +75,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 520px;
+    width: 519x;
     height: 260px;
-    background: #212125;
   }
   &__text {
-    padding: 40px;
+    padding: 50px 35px 20px 35px;
     p {
       font-family: Inter;
       font-style: normal;
@@ -93,7 +92,7 @@
   &__button {
     display: flex;
     justify-content: center;
-
+    padding-top: 5px;
     &__blue {
       width: 456px;
       height: 80px;

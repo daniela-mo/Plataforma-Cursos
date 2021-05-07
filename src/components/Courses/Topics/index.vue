@@ -1,18 +1,28 @@
-<template>
-  <div class="topics">
-    <div class="topics__title">
-      <h2>Faça esse curso de Flutter e:</h2>
-    </div>
-    <div class="topics__list">
-      <ul>
-        <li>Aprenda a criar formulários</li>
-        <li>Valide informações de campos</li>
-        <li>Aplique máscaras para campos como CPF, CEP e celular</li>
-        <li>Habilite a autenticação por biometria</li>
-      </ul>
+<template
+  ><div>
+    <div v-for="item in cursos" :key="item.id" class="topics">
+      <div class="topics__title">
+        <h2>Faça esse curso de Flutter e:</h2>
+      </div>
+      <div class="topics__list">
+        <ul>
+          <li>Aprenda a criar formulários</li>
+          <li>Valide informações de campos</li>
+          <li>Aplique máscaras para campos como CPF, CEP e celular</li>
+          <li>Habilite a autenticação por biometria</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    appresent: Array,
+  },
+};
+</script>
 
 <style lang="scss">
 .topics {

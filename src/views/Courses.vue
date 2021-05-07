@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Cursos />
     <div class="container">
       <div class="courses__nav">
         <p>
@@ -13,7 +14,7 @@
       <div class="courses__flutter">
         <div class="courses__flutter__top">
           <div class="courses__flutter__top__text">
-            <p>Curso de 08/03 a 29/03</p>
+            <p>Curso de {{ item.start }} a {{ item.end }}</p>
 
             <h2>
               Flutter
@@ -26,7 +27,7 @@
               objetivos.
             </p>
             <div>
-              <a href="#content" class="courses__flutter__top__button">
+              <a href="#courses" class="courses__flutter__top__button">
                 VER CONTEÚDO DO CURSO
               </a>
             </div>
@@ -40,7 +41,7 @@
     </div>
     <div class="micro">
       <div>
-        <Topics />
+        <Topics :appresent="cursosMap" />
         <Details />
       </div>
       <div>
@@ -56,6 +57,7 @@ import Topics from "@/components/Courses/Topics";
 import Details from "@/components/Courses/Details";
 import Briefing from "@/components/Courses/Briefing";
 import Teacher from "@/components/Courses/Teacher";
+import cursos from "@/uteis/cursos";
 
 export default {
   components: {
@@ -63,11 +65,35 @@ export default {
     Details,
     Briefing,
     Teacher,
+    cursos,
+  },
+
+  asyncData({ params }) {
+    console.log(id);
+    return {
+      //false
+      id: String(params.id),
+    };
+  },
+  data: () => ({
+    cursosMap: [],
+  }),
+  beforeMount() {
+    this.fetch();
+  },
+  methods: {
+    fetch() {
+      const cursosMap = cursos;
+      this.cursosMap = cursosMap;
+    },
+  },
+  mounted() {
+    console.log(this.$route.params.id);
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .courses__nav {
   display: flex;
   max-width: 1170px;

@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import faq from "@/util/faq";
+import faq from "@/uteis/faq";
 export default {
   data: () => ({
     itens: [],

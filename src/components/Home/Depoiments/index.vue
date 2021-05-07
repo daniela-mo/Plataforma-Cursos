@@ -14,7 +14,7 @@
 
 <script>
 import Carousel from "./Carousel";
-import commit from "@/util/commit";
+import commit from "@/uteis/commit";
 export default {
   components: {
     Carousel,
