@@ -8,17 +8,17 @@
         <div
           v-for="(item, index) in itens"
           :key="index"
-          class="item"
+          class="faq__content__list__item"
           type="button"
-          @click="setCollapse(item.setCollapse, index)"
+          @click="setCollapse(item.collapse, index)"
         >
           <h2>
             {{ item.title }}
-            <span>{{ !item.setCollapse ? "+" : "-" }}</span>
+            <span>{{ !item.collapse ? "+" : "-" }}</span>
           </h2>
           <div
             :class="
-              `item__content item__content--${
+              `faq__content__list__item__content faq__content__list__item__content--${
                 item.collapse ? 'enabled' : 'disabled'
               }`
             "
@@ -101,60 +101,69 @@ export default {
     }
     &__list {
       width: 100%;
-    }
-  }
-}
-.item {
-  width: 100%;
-  max-width: 700px;
-  cursor: pointer;
+      p {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 39px;
+        color: #ffffff;
+      }
+      &__item {
+        width: 100%;
+        max-width: 700px;
+        cursor: pointer;
 
-  h2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
-    color: var(--color-white);
-    margin: 32px 0;
-    span {
-      font-size: 22px;
-      line-height: 29px;
-      color: var(--color-white);
-    }
-  }
+        h2 {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-style: normal;
+          font-weight: normal;
+          color: var(--color-white);
+          font-size: 24px;
+          line-height: 29px;
+          margin: 32px 0;
+          span {
+            font-size: 22px;
+            line-height: 29px;
+            color: var(--color-white);
+          }
+        }
 
-  &__content {
-    padding-bottom: 32px;
+        &__content {
+          padding-bottom: 32px;
 
-    &--disabled {
-      transition: height 0.5s ease-out, display 0.5s;
-      transition-delay: 50ms;
-      height: 0;
-      opacity: 0;
-      display: none;
-    }
+          &--disabled {
+            transition: height 0.5s ease-out, display 0.5s;
+            transition-delay: 50ms;
+            height: 0;
+            opacity: 0;
+            display: none;
+          }
 
-    &--enabled {
-      transition: all 0.5s ease;
-      height: auto;
-      opacity: 1;
-    }
+          &--enabled {
+            transition: all 0.5s ease;
+            height: auto;
+            opacity: 1;
+          }
 
-    p {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 150%;
-      color: var(--color-light-silver);
+          p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            color: var(--color-light-silver);
+            color: #ffffff;
+          }
+        }
+        &__line {
+          width: 100%;
+          height: 1px;
+          background-color: var(--color-light-silver);
+        }
+      }
     }
-  }
-  &__line {
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-light-silver);
   }
 }
 </style>

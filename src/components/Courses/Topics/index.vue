@@ -1,6 +1,6 @@
 <template
   ><div>
-    <div v-for="item in cursos" :key="item.id" class="topics">
+    <div class="topics">
       <div class="topics__title">
         <h2>Faça esse curso de Flutter e:</h2>
       </div>
@@ -17,11 +17,7 @@
 </template>
 
 <script>
-export default {
-  props: {
-    appresent: Array,
-  },
-};
+export default {};
 </script>
 
 <style lang="scss">

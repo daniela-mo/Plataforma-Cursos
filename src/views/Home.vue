@@ -1,24 +1,24 @@
 <template>
   <section class="container">
     <div class="home">
-      <div class="home__text">
-        <div class="home__text__h1">
+      <div class="home__content">
+        <div class="home__content__h1">
           <h1>
             Aprenda novas habilidades e avance sua carreira
           </h1>
         </div>
-        <div class="home__text__p">
+        <div class="home__content__p">
           <p>
             Expanda suas oportunidades e acelere na direção dos seus objetivos.
           </p>
         </div>
-        <a href="#courses" class="home__text__button">
+        <a href="#courses" class="home__content__button">
           CONHEÇA NOSSOS CURSOS
         </a>
       </div>
 
       <div class="home__img">
-        <img src="@/assets/figuras.png" />
+        <img src="@/assets/figuras.png" alt="Mulher estudando" />
       </div>
     </div>
     <Listen />
@@ -55,7 +55,7 @@ export default {
   padding: 80px 0;
   margin: 0 auto;
   width: 100%;
-  &__text {
+  &__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

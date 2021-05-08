@@ -6,15 +6,15 @@
       </div>
       <div class="briefing__class">
         <div class="briefing__class__items">
-          <img src="@/assets/clock.svg" />
+          <img src="@/assets/clock.svg" alt="Tempo total das aulas em video" />
           <p>16H Aula</p>
         </div>
         <div class="briefing__class__items">
-          <img src="@/assets/youtube.svg" />
+          <img src="@/assets/youtube.svg" alt="Quantidade de video aulas" />
           <p>6 Vídeos</p>
         </div>
         <div class="briefing__class__items">
-          <img src="@/assets/book-open.svg" />
+          <img src="@/assets/book-open.svg" alt="Quantidade de atividades" />
           4 Atividades
         </div>
       </div>

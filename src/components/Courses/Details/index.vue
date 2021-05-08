@@ -1,12 +1,12 @@
 <template>
-  <div id="content" class="details">
+  <div class="details">
     <div class="details__content">
       <div class="details__title">
         <h2>Conteúdo detalhado do curso</h2>
       </div>
       <div class="details__list">
         <div
-          v-for="(item, index) in itens"
+          v-for="(item, index) in context"
           :key="index"
           class="item"
           type="button"
@@ -34,9 +34,10 @@
 
 <script>
 import cursos from "@/uteis/cursos";
+
 export default {
   data: () => ({
-    itens: [],
+    context: [],
   }),
   watch: {
     collap() {
@@ -51,7 +52,7 @@ export default {
   methods: {
     init() {
       const arr = [];
-      conteudo.map((item) => {
+      cursos.map((item) => {
         item.collapse = false; // trás os itens já abertos, o collapse aberto
         arr.push(item); // guarda e trás o conteúdo dentro de item
         return false;

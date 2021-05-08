@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Cursos />
     <div class="container">
       <div class="courses__nav">
         <p>
@@ -14,7 +13,7 @@
       <div class="courses__flutter">
         <div class="courses__flutter__top">
           <div class="courses__flutter__top__text">
-            <p>Curso de {{ item.start }} a {{ item.end }}</p>
+            <p>Curso de 08/03 a 29/03</p>
 
             <h2>
               Flutter
@@ -27,7 +26,7 @@
               objetivos.
             </p>
             <div>
-              <a href="#courses" class="courses__flutter__top__button">
+              <a href="" class="courses__flutter__top__button">
                 VER CONTEÚDO DO CURSO
               </a>
             </div>
@@ -41,7 +40,7 @@
     </div>
     <div class="micro">
       <div>
-        <Topics :appresent="cursosMap" />
+        <Topics />
         <Details />
       </div>
       <div>
@@ -71,8 +70,7 @@ export default {
   asyncData({ params }) {
     console.log(id);
     return {
-      //false
-      id: String(params.id),
+      id: params.useId,
     };
   },
   data: () => ({
