@@ -1,11 +1,11 @@
 <template>
-  <div class="listen">
-    <div class="listen__feather">
-      <div class="listen__feather__items">
-        <div class="listen__feather__items__img">
+  <div class="home-listen">
+    <div class="home-listen__feather">
+      <div class="home-listen__feather__items">
+        <div class="home-listen__feather__items__img">
           <img src="@/assets/feather_book-open.svg" />
         </div>
-        <div class="listen__feather__items__text">
+        <div class="home-listen__feather__items__text">
           <span>Amet minim mollit</span>
           <p>
             non deserunt ullamco est sit aliqua dolor do amet sint. Velit
@@ -14,11 +14,11 @@
         </div>
       </div>
 
-      <div class="listen__feather__items">
-        <div class="listen__feather__items__img">
+      <div class="home-listen__feather__items">
+        <div class="home-listen__feather__items__img">
           <img src="@/assets/feather_clock.svg" />
         </div>
-        <div class="listen__feather__items__text">
+        <div class="home-listen__feather__items__text">
           <span>Amet minim mollit</span>
           <p>
             non deserunt ullamco est sit aliqua dolor do amet sint. Velit
@@ -27,11 +27,11 @@
         </div>
       </div>
 
-      <div class="listen__feather__items">
-        <div class="listen__feather__items__img">
+      <div class="home-listen__feather__items">
+        <div class="home-listen__feather__items__img">
           <img src="@/assets/feather_award.svg" />
         </div>
-        <div class="listen__feather__items__text">
+        <div class="home-listen__feather__items__text">
           <span>Amet minim mollit</span>
           <p>
             non deserunt ullamco est sit aliqua dolor do amet sint. Velit
@@ -40,11 +40,11 @@
         </div>
       </div>
 
-      <div class="listen__feather__items">
-        <div class="listen__feather__items__img">
+      <div class="home-listen__feather__items">
+        <div class="home-listen__feather__items__img">
           <img src="@/assets/feather_message-square.svg" />
         </div>
-        <div class="listen__feather__items__text">
+        <div class="home-listen__feather__items__text">
           <span>Amet minim mollit</span>
           <p>
             non deserunt ullamco est sit aliqua dolor do amet sint. Velit
@@ -61,7 +61,7 @@ export default {};
 </script>
 
 <style lang="scss">
-.listen {
+.home-listen {
   display: flex;
   max-width: 1170px;
   margin: 0 auto;

@@ -1,17 +1,17 @@
 <template>
   <div class="container">
-    <div class="content">
-      <div class="content__footer">
-        <div class="content__footer__logo">
+    <div class="footer-content">
+      <div class="footer-content__all">
+        <div class="footer-content__all__logo">
           <img src="@/assets/edtech.svg" />
         </div>
 
-        <div class="content__footer__contacts">
-          <div class="content__footer__contacts__redes">
+        <div class="footer-content__all__contacts">
+          <div class="footer-content__all__contacts__redes">
             <div>
               <span>Redes sociais:</span>
             </div>
-            <div class="content__footer__contacts__redes__icons">
+            <div class="footer-content__all__contacts__redes__icons">
               <img src="@/assets/linkedin.svg" />
               <img src="@/assets/facebook.svg" />
               <img src="@/assets/twitter.svg" />
@@ -19,27 +19,27 @@
             </div>
           </div>
 
-          <div class="content__footer__contacts__email">
+          <div class="footer-content__all__contacts__email">
             <strong>Fale com a gente: </strong>
             <p>contato@edtech.com.br</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="copyright">
+    <div class="footer-copyright">
       © 2021 EDTECH. Todos os direitos reservados.
     </div>
   </div>
 </template>
 
 <style lang="scss">
-.content {
+.footer-content {
   display: flex;
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
   border-top: 1px var(--color-gray-50) solid;
-  &__footer {
+  &__all {
     padding-top: 60px;
     width: 100%;
     &__logo {
@@ -94,7 +94,7 @@
     }
   }
 }
-.copyright {
+.footer-copyright {
   display: flex;
   color: var(--color-light-silver);
   display: flex;

@@ -1,14 +1,14 @@
 <template>
   <div id="details" class="details">
-    <div class="details__content">
-      <div class="details__content__title">
+    <div class="course-details__content">
+      <div class="course-details__content__title">
         <h2>Conteúdo detalhado do curso</h2>
       </div>
-      <div class="details__content__list">
+      <div class="course-details__content__list">
         <div
           v-for="(item, index) in details"
           :key="index"
-          class="details__content__list__item"
+          class="course-details__content__list__item"
           type="button"
           @click="setCollapse(item.collapse, index)"
         >
@@ -18,14 +18,14 @@
           </h2>
           <div
             :class="
-              `details__content__list__item__collapse details__content__list__item__collapse--${
+              `course-details__content__list__item__collapse course-details__content__list__item__collapse--${
                 item.collapse ? 'enable' : 'disabled'
               }`
             "
           >
             <p>{{ item.appresent }}</p>
           </div>
-          <div class="details__list__item__collapse__line"></div>
+          <div class="course-details__list__item__collapse__line"></div>
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@ export default {
 </script>
 
 <style lang="scss">
-.details {
+.course-details {
   display: flex;
   max-width: 1170px;
   padding: 80px 0;

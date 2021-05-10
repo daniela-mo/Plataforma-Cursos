@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <div class="header">
+    <div class="all-header">
       <router-link to="/"> <img src="@/assets/edtech.svg"/></router-link>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.header {
+.all-header {
   display: flex;
   width: 90%;
   max-width: 1170px;

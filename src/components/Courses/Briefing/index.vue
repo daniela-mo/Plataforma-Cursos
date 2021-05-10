@@ -1,24 +1,24 @@
 <template>
   <div>
-    <div class="briefing">
-      <div class="briefing__title">
+    <div class="course-briefing">
+      <div class="course-briefing__title">
         <p>Resumo do conteúdo</p>
       </div>
-      <div class="briefing__class">
-        <div class="briefing__class__items">
+      <div class="course-briefing__class">
+        <div class="course-briefing__class__items">
           <img src="@/assets/clock.svg" alt="Tempo total das aulas em video" />
           <p>16H Aula</p>
         </div>
-        <div class="briefing__class__items">
+        <div class="course-briefing__class__items">
           <img src="@/assets/youtube.svg" alt="Quantidade de video aulas" />
           <p>6 Vídeos</p>
         </div>
-        <div class="briefing__class__items">
+        <div class="course-briefing__class__items">
           <img src="@/assets/book-open.svg" alt="Quantidade de atividades" />
           4 Atividades
         </div>
       </div>
-      <div class="briefing__video">
+      <div class="course-briefing__video">
         <iframe
           width="560"
           height="315"
@@ -30,20 +30,22 @@
         ></iframe>
       </div>
 
-      <div class="briefing__text">
+      <div class="course-briefing__text">
         <p>
           Expanda suas oportunidade e acelere na direção dos seus objetivos.
         </p>
       </div>
-      <div class="briefing__button">
-        <button class="briefing__button__blue">QUERO ME INSCREVER</button>
+      <div class="course-briefing__button">
+        <button class="course-briefing__button__blue">
+          QUERO ME INSCREVER
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss">
-.briefing {
+.course-briefing {
   display: flex;
   width: 520px;
   height: 668px;

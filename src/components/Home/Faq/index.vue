@@ -1,24 +1,24 @@
 <template>
-  <div class="faq">
-    <div class="faq__content">
-      <div class="faq__content__title">
+  <div class="faq-home">
+    <div class="faq-home__content">
+      <div class="faq-home__content__title">
         <h2>Perguntas Frequentes</h2>
       </div>
-      <div class="faq__content__list">
+      <div class="faq-home__content__list">
         <div
           v-for="(item, index) in itens"
           :key="index"
-          class="faq__content__list__item"
+          class="faq-home__content__list__item"
           type="button"
           @click="setCollapse(item.collapse, index)"
         >
-          <h2 class="faq__content__list__item__h2">
+          <h2 class="faq-home__content__list__item__h2">
             {{ item.title }}
             <span>{{ !item.collapse ? "+" : "-" }}</span>
           </h2>
           <div
             :class="
-              `faq__content__list__item__collapse faq__content__list__item__collapse--${
+              `faq-home__content__list__item__collapse faq-home__content__list__item__collapse--${
                 item.collapse ? 'enabled' : 'disabled'
               }`
             "
@@ -70,7 +70,7 @@ export default {
 </script>
 
 <style lang="scss">
-.faq {
+.faq-home {
   display: flex;
   max-width: 1170px;
   margin: 0 auto;

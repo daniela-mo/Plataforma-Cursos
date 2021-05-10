@@ -1,12 +1,12 @@
 <template>
   <div id="courses" class="item-content">
-    <div v-for="item in courses" :key="item.id" class="card">
-      <div class="card__top">
-        <div class="card__top__text">
-          <div class="card__top__text__tec">
+    <div v-for="item in courses" :key="item.id" class="item-content__card">
+      <div class="item-content__card__top">
+        <div class="item-content__card__top__text">
+          <div class="item-content__card__top__text__tec">
             <h3>{{ item.type }}</h3>
           </div>
-          <div class="card__top__text__course">
+          <div class="item-content__card__top__text__course">
             <span>{{ item.name }}</span>
           </div>
         </div>
@@ -15,14 +15,14 @@
         </div>
       </div>
 
-      <div class="card__bottom">
-        <div class="card__bottom__date">
+      <div class="item-content__card__bottom">
+        <div class="item-content__card__bottom__date">
           <span>{{ item.start }} a {{ item.end }}</span>
         </div>
-        <div class="card__bottom__p">
+        <div class="item-content__card__bottom__p">
           <p>{{ item.description }}</p>
         </div>
-        <div class="card__bottom__button">
+        <div class="item-content__card__bottom__button">
           <router-link
             :to="`/courses/${item.useId}`"
             style="text-decoration:none"
@@ -50,7 +50,7 @@ export default {
   width: 100%;
   max-width: 1170px;
 }
-.card {
+.item-content__card {
   width: 364px;
   height: 510px;
   background: #212125;

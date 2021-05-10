@@ -1,18 +1,18 @@
 <template>
-  <div class="courses">
-    <div class="courses__content">
-      <div class="courses__content__text">
+  <div class="available-courses">
+    <div class="available-courses__content">
+      <div class="available-courses__content__text">
         <div>
           <h2>Cursos em aberto</h2>
         </div>
-        <div class="courses__content__text__p">
+        <div class="available-courses__content__text__p">
           <p>
             Cursos e conteúdo para você se capacitar em tecnologia e negócios
             digitais.
           </p>
         </div>
       </div>
-      <div class="courses__content__cards">
+      <div class="available-courses__content__cards">
         <Cards :courses="cursosMap" />
         <!-- o item acima é um props para comunicação com a index dos cards -->
       </div>
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style lang="scss">
-.courses {
+.available-courses {
   display: flex;
   max-width: 1170px;
   margin: 0 auto;

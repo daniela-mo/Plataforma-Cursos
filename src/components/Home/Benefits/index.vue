@@ -1,29 +1,29 @@
 <template>
-  <div class="benefits">
-    <div class="benefits__content">
-      <div class="benefits__content__description">
-        <div class="benefits__content__description__img">
+  <div class="home-benefits">
+    <div class="home-benefits__content">
+      <div class="home-benefits__content__description">
+        <div class="home-benefits__content__description__img">
           <img src="@/assets/users.svg" />
         </div>
-        <div class="benefits__content__description__text">
+        <div class="home-benefits__content__description__text">
           <span>Totalmente gratuito</span>
           <p>Instrutores especialistas e dedicados.</p>
         </div>
       </div>
-      <div class="benefits__content__description">
-        <div class="benefits__content__description__img">
+      <div class="home-benefits__content__description">
+        <div class="home-benefits__content__description__img">
           <img src="@/assets/file-text.svg" />
         </div>
-        <div class="benefits__content__description__text">
+        <div class="home-benefits__content__description__text">
           <span>A partir de Abril</span>
           <p>Aulas planejadas para que você estude e pratique.</p>
         </div>
       </div>
-      <div class="benefits__content__description">
+      <div class="home-benefits__content__description">
         <div class="benefits__content__description__img">
           <img src="@/assets/calendar.svg" />
         </div>
-        <div class="benefits__content__description__text">
+        <div class="home-benefits__content__description__text">
           <span>Apoio da comunidade</span>
           <p>12 meses de acesso completo a todas as aulas.</p>
         </div>
@@ -32,7 +32,7 @@
   </div>
 </template>
 <style lang="scss">
-.benefits {
+.home-benefits {
   display: flex;
   max-width: 1170px;
   width: 100%;

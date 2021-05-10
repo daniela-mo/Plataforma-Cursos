@@ -1,11 +1,11 @@
 <template>
-  <div class="depoiments">
-    <div class="depoiments__content">
-      <div class="depoiments__content__text">
+  <div class="home-depoiments">
+    <div class="home-depoiments__content">
+      <div class="home-depoiments__content__text">
         <h2>Depoimentos</h2>
         <p>Velit officia consequat duis enim velit mollit.</p>
       </div>
-      <div class="depoiments__content__carousel">
+      <div class="home-depoiments__content__carousel">
         <Carousel :commit="commitMap" />
       </div>
     </div>
@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style lang="scss">
-.depoiments {
+.home-depoiments {
   display: flex;
   max-width: 1170px;
   margin: 0 auto;

@@ -1,18 +1,18 @@
 <template>
   <div>
     <div class="container">
-      <div class="courses__nav">
+      <div class="courses-top__nav">
         <p>
           Edtech >
         </p>
-        <router-link to="/" class="courses__nav__back"
+        <router-link to="/" class="courses-top__nav__back"
           >Nossos cursos</router-link
         >
         <p>> Flutter</p>
       </div>
-      <div class="courses__flutter">
-        <div class="courses__flutter__top">
-          <div class="courses__flutter__top__text">
+      <div class="courses-top__flutter">
+        <div class="courses-top__flutter__course">
+          <div class="courses-top__flutter__course__text">
             <p>Curso de 08/03 a 29/03</p>
 
             <h2>
@@ -26,13 +26,13 @@
               objetivos.
             </p>
             <div>
-              <a href="#details" class="courses__flutter__top__button">
+              <a href="#details" class="courses-top__flutter__course__button">
                 VER CONTEÚDO DO CURSO
               </a>
             </div>
           </div>
 
-          <div class="courses__flutter__top__img">
+          <div class="courses-top__flutter__course_img">
             <img src="@/assets/ilustracao_flutter.svg" />
           </div>
         </div>
@@ -91,7 +91,7 @@ export default {
 </script>
 
 <style lang="scss">
-.courses__nav {
+.courses-top__nav {
   display: flex;
   max-width: 1170px;
   padding: 40px 0;
@@ -104,19 +104,19 @@ export default {
     margin-right: 8px;
   }
 }
-.courses__nav__back {
+.courses-top__nav__back {
   margin-right: 8px;
   text-decoration: none;
   color: #fff;
 }
-.courses__flutter {
+.courses-top__flutter {
   display: flex;
   max-width: 1170px;
   padding: 60px 0;
   margin: 0 auto;
   width: 100%;
 
-  &__top {
+  &__course {
     display: flex;
     justify-content: space-between;
     width: 100%;

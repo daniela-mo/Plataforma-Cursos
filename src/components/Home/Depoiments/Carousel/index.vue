@@ -1,19 +1,19 @@
 <template>
   <div class="item-content">
-    <div v-for="item in commit" :key="item.id" class="carousel">
-      <div class="carousel__content">
+    <div v-for="item in commit" :key="item.id" class="item-content__carousel">
+      <div class="item-content__carousel__content">
         <div>
           <img :src="item.imageURl" />
         </div>
 
-        <div class="carousel__content__name">
+        <div class="item-content__carousel__content__name">
           <h3>{{ item.name }}</h3>
         </div>
 
-        <div class="carousel__content__text">
+        <div class="item-content__carousel__content__text">
           <p>{{ item.description }}</p>
         </div>
-        <div class="carousel__content__text">
+        <div class="item-content__carousel__content__text">
           <span>{{ item.type }}</span>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default {
   width: 100%;
 }
 
-.carousel {
+.item-content__carousel {
   width: 364px;
   height: 306px;
   background: #212125;

@@ -1,10 +1,10 @@
 <template
   ><div>
-    <div class="topics">
-      <div class="topics__title">
+    <div class="course-topics">
+      <div class="course-topics__title">
         <h2>Faça esse curso de Flutter e:</h2>
       </div>
-      <div class="topics__list">
+      <div class="course-topics__list">
         <ul>
           <li>Aprenda a criar formulários</li>
           <li>Valide informações de campos</li>
@@ -21,7 +21,7 @@ export default {};
 </script>
 
 <style lang="scss">
-.topics {
+.course-topics {
   display: flex;
   max-width: 1170px;
   padding: 80px 0;

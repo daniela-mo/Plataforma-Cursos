@@ -1,18 +1,18 @@
 <template>
-  <div class="teacher">
-    <div class="teacher__top">
-      <div class="teacher__title">
+  <div class="course-teacher">
+    <div class="course-teacher__top">
+      <div class="course-teacher__title">
         <p>Instrutor</p>
       </div>
 
-      <div class="teacher__center">
+      <div class="course-teacher__center">
         <div>
           <img src="@/assets/instructor.svg" />
         </div>
-        <div class="teacher__center__informations">
+        <div class="course-teacher__center__informations">
           <span>Ricardo Ogliari</span>
           <p>Tech Lead Android</p>
-          <div class="teacher__center__informations__icons">
+          <div class="course-teacher__center__informations__icons">
             <img src="@/assets/techer-github.svg" />
             <img src="@/assets/teacher-linkedin.svg" />
             <img src="@/assets/teacher-instagram.svg" />
@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="teacher__skills">
+    <div class="course-teacher__skills">
       <p>
         Ricardo é graduado em Análise e Desenvolvimento de Sistemas. Atualmente
         é mestrando na área de sistemas de informação pela UFRJ. Desenvolvedor
@@ -32,7 +32,7 @@
 </template>
 
 <style lang="scss">
-.teacher {
+.course-teacher {
   display: flex;
   width: 520px;
   height: 469px;
