@@ -3,10 +3,10 @@
     <div v-for="item in courses" :key="item.id" class="card">
       <div class="card__top">
         <div class="card__top__text">
-          <div class="card__top__text__mobile">
+          <div class="card__top__text__tec">
             <h3>{{ item.type }}</h3>
           </div>
-          <div class="card__top__text__flutter">
+          <div class="card__top__text__course">
             <span>{{ item.name }}</span>
           </div>
         </div>
@@ -24,8 +24,8 @@
         </div>
         <div class="card__bottom__button">
           <router-link
-            style="text-decoration:none"
             :to="`/courses/${item.useId}`"
+            style="text-decoration:none"
             >IR PARA O CURSO</router-link
           >
         </div>
@@ -37,7 +37,7 @@
 <script>
 export default {
   props: {
-    courses: Array,
+    courses: Array, // carrega os dados solicitados na index pai para os cards através do props
   },
 };
 </script>
@@ -64,8 +64,8 @@ export default {
       justify-content: space-between;
       flex-direction: column;
       padding-bottom: 20px;
-      &__mobile {
-        width: 62px;
+      &__tec {
+        width: 80px;
         height: 25px;
         background: #141313;
         border-radius: 2px;
@@ -74,16 +74,16 @@ export default {
           align-items: center;
           justify-content: center;
           color: var(--color-white);
-          width: 62px;
+          width: 80px;
           height: 30px;
           background: #141313;
           border-radius: 2px;
-          font-family: Inter;
+          font-family: Helvetica;
           font-size: 12px;
           line-height: 14px;
         }
       }
-      &__flutter {
+      &__course {
         display: flex;
         align-items: flex-end;
 
@@ -98,11 +98,10 @@ export default {
   }
   &__bottom {
     padding: 0 25px;
-    & {
+    &__date {
       span {
-        font-family: Inter;
+        font-family: Helvetica, sans-serif;
         font-style: normal;
-
         font-size: 20px;
         line-height: 150%;
         color: #ffffff;
@@ -111,7 +110,7 @@ export default {
     &__p {
       margin-top: 5px;
       p {
-        font-family: Inter;
+        font-family: Helvetica, sans-serif;
         font-style: normal;
         font-weight: normal;
         font-size: 22px;
@@ -125,12 +124,13 @@ export default {
       justify-content: center;
       margin-top: 40px;
       padding: 10px;
+      background: #fcc419;
       width: 154px;
       height: 49px;
       color: #191820;
+      font-family: Inter;
       font-weight: 600;
       font-size: 14px;
-      background: #fcc419;
       text-decoration: none;
       border-radius: 8px;
       border: none;

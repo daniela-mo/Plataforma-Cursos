@@ -26,7 +26,7 @@
               objetivos.
             </p>
             <div>
-              <a href="" class="courses__flutter__top__button">
+              <a href="#details" class="courses__flutter__top__button">
                 VER CONTEÚDO DO CURSO
               </a>
             </div>
@@ -56,7 +56,7 @@ import Topics from "@/components/Courses/Topics";
 import Details from "@/components/Courses/Details";
 import Briefing from "@/components/Courses/Briefing";
 import Teacher from "@/components/Courses/Teacher";
-import cursos from "@/uteis/cursos";
+import details from "@/uteis/details";
 
 export default {
   components: {
@@ -64,29 +64,28 @@ export default {
     Details,
     Briefing,
     Teacher,
-    cursos,
+    details,
   },
 
   asyncData({ params }) {
     console.log(id);
     return {
-      id: params.useId,
+      id: params.Id,
     };
   },
   data: () => ({
-    cursosMap: [],
+    // arrow function > forma reduzida de declarar a função
+    detailsMap: [],
   }),
   beforeMount() {
     this.fetch();
   },
   methods: {
     fetch() {
-      const cursosMap = cursos;
-      this.cursosMap = cursosMap;
+      const detailsMap = details; // utilizamos o map pra realizar as alterações ou atualização feitas no array.
+      //mapeando os dados dentro da details, e trazendo-os para preencher os campos, sempre atualizando conforme cada alteração feita
+      this.detailsMap = detailsMap;
     },
-  },
-  mounted() {
-    console.log(this.$route.params.id);
   },
 };
 </script>
@@ -157,11 +156,13 @@ export default {
     }
     &__button {
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       background: var(--color-button);
       color: var(--color-black);
-      font-size: 12px;
-      padding: 14px 10px;
+      font-size: 14px;
+      padding: 15px 10px;
+
+      font-weight: 600;
       margin-top: 20px;
       border: none;
       text-decoration: none;

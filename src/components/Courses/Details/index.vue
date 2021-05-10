@@ -1,14 +1,14 @@
 <template>
-  <div class="details">
+  <div id="details" class="details">
     <div class="details__content">
-      <div class="details__title">
+      <div class="details__content__title">
         <h2>Conteúdo detalhado do curso</h2>
       </div>
-      <div class="details__list">
+      <div class="details__content__list">
         <div
-          v-for="(item, index) in context"
+          v-for="(item, index) in details"
           :key="index"
-          class="item"
+          class="details__content__list__item"
           type="button"
           @click="setCollapse(item.collapse, index)"
         >
@@ -18,14 +18,14 @@
           </h2>
           <div
             :class="
-              `item__content item__content--${
-                item.collapse ? 'enabled' : 'disabled'
+              `details__content__list__item__collapse details__content__list__item__collapse--${
+                item.collapse ? 'enable' : 'disabled'
               }`
             "
           >
-            <p>{{ item.description }}</p>
+            <p>{{ item.appresent }}</p>
           </div>
-          <div class="item__line"></div>
+          <div class="details__list__item__collapse__line"></div>
         </div>
       </div>
     </div>
@@ -33,51 +33,44 @@
 </template>
 
 <script>
-import cursos from "@/uteis/cursos";
-
+import details from "@/uteis/details";
 export default {
   data: () => ({
-    context: [],
-  }),
+    details: [],
+  }), // minha função
   watch: {
+    // acompanhar as mudanças dos valores da variável
     collap() {
       this.init();
     },
   },
   mounted() {
+    //
     this.init();
-    console.log(this.itens);
+    console.log(this.details);
   },
-
   methods: {
     init() {
-      const arr = [];
-      cursos.map((item) => {
-        item.collapse = false; // trás os itens já abertos, o collapse aberto
-        arr.push(item); // guarda e trás o conteúdo dentro de item
+      const array = [];
+      details.map((item) => {
+        //mapeia os dados dento do details.js para trazelos
+        item.collapse = false;
+        array.push(item);
         return false;
       });
-      this.itens = arr;
+      this.details = array;
     },
-
     setCollapse(collapse, index) {
-      const arr = this.itens;
+      const array = this.details;
       if (this.closeToOpen) {
-        arr.map((item) => {
-          item.collapse = false; // faz os tópicos abrirem e fecharem
+        array.map((item) => {
+          item.collpase = false; //chama o meu array dentro de details.js e carrega os dados fechados no collpase
           return false;
         });
-      } //else {
-      //   this.Open;
-      //   arr.map((item) => {
-      //     item.collapse = false; // quando um tópico for aberto, o anterior fecha
-      //     return true;
-      //   });
-      // }
-
-      arr[index].collapse = !arr[index].collapse;
-      if (collapse) arr[index].collapse = false; /// sem essa parte, o texto não abre
-      this.itens = [...arr];
+      }
+      array[index].collapse = !array[index].collapse;
+      if (collapse) array[index].collapse = false; // o collapse fecha e abre, com o true abrirá e não fechará
+      this.details = [...array];
     },
   },
 };
@@ -102,61 +95,68 @@ export default {
     }
     &__list {
       width: 100%;
-    }
-  }
-}
-.item {
-  width: 100%;
-  max-width: 550px;
-  cursor: pointer;
+      p {
+        font-family: Inter;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 39px;
+        color: #000;
+      }
+      &__item {
+        width: 100%;
+        max-width: 550px;
+        cursor: pointer;
+        h2 {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-family: Helvetica;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 29px;
+          color: var(--color-blecaute);
+          margin: 32px 0;
+          span {
+            font-size: 22px;
+            line-height: 29px;
+            color: var(--color-blecaute);
+          }
+        }
 
-  h2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
-    color: var(--color-blecaute);
-    margin: 32px 0;
-    span {
-      font-size: 22px;
-      line-height: 29px;
-      color: var(--color-blecaute);
-    }
-  }
+        &__collapse {
+          padding-bottom: 32px;
 
-  &__content {
-    padding-bottom: 32px;
+          &--disabled {
+            transition: height 0.5s ease-out, display 0.5s;
+            transition-delay: 50ms;
+            height: 0;
+            opacity: 0;
+            display: none;
+          }
 
-    &--disabled {
-      transition: height 0.5s ease-out, display 0.5s;
-      transition-delay: 50ms;
-      height: 0;
-      opacity: 0;
-      display: none;
+          &--enabled {
+            transition: all 0.5s ease;
+            height: auto;
+            opacity: 1;
+          }
+          p {
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 150%;
+            color: #000;
+          }
+        }
+        &__line {
+          width: 100%;
+          height: 1px;
+          background-color: var(--color-dark);
+        }
+      }
     }
-
-    &--enabled {
-      transition: all 0.5s ease;
-      height: auto;
-      opacity: 1;
-    }
-    p {
-      display: flex;
-      flex-direction: column;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 150%;
-      color: var(--color-blecaute);
-    }
-  }
-  &__line {
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-dark);
   }
 }
 </style>

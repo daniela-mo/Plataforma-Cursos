@@ -63,8 +63,10 @@ export default {
     &__h1 {
       width: 500px;
       h1 {
+        font-family: Inter;
+        font-style: normal;
         color: var(--color-white);
-        font-weight: 700;
+        font-weight: bold;
         font-size: 48px;
       }
     }
@@ -73,19 +75,24 @@ export default {
       margin-top: 25px;
       p {
         color: var(--color-white);
-        font-family: Inter;
+        font-family: Helvetica, sans-serif;
         font-size: 24px;
+        line-height: 150%;
       }
     }
     &__button {
       background: var(--color-button);
       color: var(--color-black);
       font-size: 14px;
+      font-style: normal;
+      font-family: Inter;
+      font-weight: 600;
       padding: 14px 10px;
       margin-top: 20px;
       border: none;
       border-radius: 5px;
       text-decoration: none;
+      line-height: 17px;
     }
   }
   &__img {

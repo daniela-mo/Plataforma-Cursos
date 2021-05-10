@@ -72,7 +72,7 @@ export default {};
       display: flex;
       justify-content: space-between;
       width: 400px;
-      margin: 0 60px 40px 0;
+      margin: 0 104px 40px 0;
       flex-direction: row;
       align-items: flex-start;
       &__img {

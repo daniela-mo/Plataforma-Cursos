@@ -35,10 +35,16 @@ export default {};
     }
   }
   &__list {
-    padding-top: 20px;
+    padding-top: 10px;
     ul,
     li {
+      padding-top: 20px;
+      line-height: 150%;
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: normal;
       font-size: 22px;
+      line-height: 150%;
       line-height: 150%;
     }
     ul {

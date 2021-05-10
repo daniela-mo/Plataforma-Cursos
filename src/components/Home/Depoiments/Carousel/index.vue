@@ -44,7 +44,7 @@ export default {
   background: #212125;
   border-radius: 8px;
   &__content {
-    margin: 30px;
+    margin: 20px;
     img {
       width: 64px;
       height: 64px;
@@ -62,20 +62,21 @@ export default {
       }
     }
     &__text {
-      margin-top: 30px;
+      margin-top: 25px;
       p {
-        font-family: Inter;
+        font-family: Helvetica;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 150%;
         color: #bcbcbc;
       }
       span {
         width: 154px;
         height: 49px;
-        font-weight: 600;
-        font-size: 14px;
+        font-size: 16px;
+        line-height: 150%;
+        font-family: Helvetica;
         color: #fcc419;
       }
     }

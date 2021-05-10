@@ -2,7 +2,7 @@ const commit = [
   {
     id: 1,
     imageURl:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmgPmueisuVezgW6wdUxW1TDaoIwGHJNQB2w&usqp=CAU",
+      "https://i.pinimg.com/originals/de/9b/f5/de9bf5ac9ae734584539ce5a24ee1f9a.jpg",
     name: "Valéria Hevia",
     description:
       "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Velit officia consequat duis enim velit.",
@@ -19,8 +19,7 @@ const commit = [
   },
   {
     id: 3,
-    imageURl:
-      "https://grupomidia.com/hcm/wp-content/uploads/2020/12/UnimedPetropolis2-800x600.jpg",
+    imageURl: "https://img.ibxk.com.br/2019/02/17/17124052466014.jpg",
     name: "Antônio Henrique",
     description:
       "Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Velit officia consequat duis enim velit.",

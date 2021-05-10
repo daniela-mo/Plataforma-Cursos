@@ -56,12 +56,13 @@ export default {
       }
 
       p {
+        width: 450px;
         margin-top: 10px;
-        color: var(--color-white);
+        font-family: Helvetica;
         font-family: Inter;
         font-style: normal;
         line-height: 24px;
-        font-size: 16px;
+        font-size: 24px;
         color: var(--color-light-silver);
       }
     }
@@ -71,6 +72,11 @@ export default {
       width: 100%;
       justify-content: space-between;
       align-items: center;
+    }
+
+    &__points {
+      width: 52px;
+      height: 12px;
     }
   }
 }

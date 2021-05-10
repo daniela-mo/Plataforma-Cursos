@@ -12,23 +12,19 @@
           type="button"
           @click="setCollapse(item.collapse, index)"
         >
-          <h2>
+          <h2 class="faq__content__list__item__h2">
             {{ item.title }}
             <span>{{ !item.collapse ? "+" : "-" }}</span>
           </h2>
           <div
             :class="
-              `faq__content__list__item__content faq__content__list__item__content--${
+              `faq__content__list__item__collapse faq__content__list__item__collapse--${
                 item.collapse ? 'enabled' : 'disabled'
               }`
             "
           >
-            <p>
-              {{ item.description }}
-            </p>
+            <p>{{ item.description }}</p>
           </div>
-
-          <div class="item__line"></div>
         </div>
       </div>
     </div>
@@ -41,38 +37,33 @@ export default {
   data: () => ({
     itens: [],
   }),
-  watch: {
-    collap() {
-      this.init();
-    },
-  },
+
   mounted() {
     this.init();
-    console.log(this.itens);
   },
 
   methods: {
     init() {
-      const arr = [];
+      const array = [];
       faq.map((item) => {
-        item.collapse = false;
-        arr.push(item);
+        item.collapse = false; // false faz o collapse carregar fechado, true aberto
+        array.push(item);
         return false;
       });
-      this.itens = arr;
+      this.itens = array;
     },
 
     setCollapse(collapse, index) {
-      const arr = this.itens;
+      const array = this.itens;
       if (this.closeToOpen) {
-        arr.map((item) => {
-          item.collapse = false;
+        array.map((item) => {
+          item.collapse = true;
           return false;
         });
       }
-      arr[index].collapse = !arr[index].collapse;
-      if (collapse) arr[index].collapse = false;
-      this.itens = [...arr];
+      array[index].collapse = !array[index].collapse;
+      if (collapse) array[index].collapse = false;
+      this.itens = [...array];
     },
   },
 };
@@ -87,6 +78,7 @@ export default {
   &__content {
     padding: 80px 0;
     width: 100%;
+
     &__title {
       padding-bottom: 30px;
 
@@ -101,6 +93,7 @@ export default {
     }
     &__list {
       width: 100%;
+
       p {
         font-family: Inter;
         font-style: normal;
@@ -113,25 +106,25 @@ export default {
         width: 100%;
         max-width: 700px;
         cursor: pointer;
-
-        h2 {
+        margin: 32px 0;
+        &__h2 {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          border-top: 0.5px solid #c4c4c4;
+          color: var(--color-white);
           font-style: normal;
           font-weight: normal;
-          color: var(--color-white);
           font-size: 24px;
           line-height: 29px;
-          margin: 32px 0;
-          span {
-            font-size: 22px;
-            line-height: 29px;
-            color: var(--color-white);
-          }
+          padding: 20px 0;
         }
-
-        &__content {
+        span {
+          font-size: 22px;
+          line-height: 29px;
+          color: var(--color-white);
+        }
+        &__collapse {
           padding-bottom: 32px;
 
           &--disabled {
@@ -149,18 +142,13 @@ export default {
           }
 
           p {
+            color: #bcbcbc;
+            font-family: Helvetica;
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 150%;
-            color: var(--color-light-silver);
-            color: #ffffff;
           }
-        }
-        &__line {
-          width: 100%;
-          height: 1px;
-          background-color: var(--color-light-silver);
         }
       }
     }

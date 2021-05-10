@@ -69,15 +69,15 @@
           font-style: normal;
           font-weight: bold;
           font-size: 16px;
-          line-height: 160%;
+          line-height: 150%;
           color: #ffffff;
         }
         p {
-          font-family: Inter;
+          font-family: Helvetica;
           font-style: normal;
           font-weight: normal;
           font-size: 14px;
-          line-height: 160%;
+          line-height: 150%;
           color: #bcbcbc;
         }
       }

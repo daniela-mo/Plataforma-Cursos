@@ -14,6 +14,7 @@
       </div>
       <div class="courses__content__cards">
         <Cards :courses="cursosMap" />
+        <!-- o item acima é um props para comunicação com a index dos cards -->
       </div>
     </div>
   </div>
@@ -29,20 +30,21 @@ export default {
   asyncData({ params }) {
     console.log(params);
     return {
-      id: String(params.id),
+      id: params.id,
     };
   },
   data: () => ({
     cursosMap: [],
   }),
   beforeMount() {
+    //observa a atividade da função antes de ser chamada na tela
     this.fetch();
 
     console.log(cursos);
   },
   methods: {
     fetch() {
-      const cursosMap = cursos;
+      const cursosMap = cursos; // mapeia o conteúdo dentro do arquivo cursos.js para reinderiza-los nos cards
       this.cursosMap = cursosMap;
     },
   },
@@ -71,10 +73,10 @@ export default {
         width: 500px;
         p {
           margin-top: 10px;
-          color: var(--color-white);
-          font-family: Inter;
+          color: #bcbcbc;
+          font-family: Helvetica, sans-serif;
           font-style: normal;
-          line-height: 25px;
+          line-height: 150%;
           font-size: 24px;
           color: var(--color-light-silver);
         }

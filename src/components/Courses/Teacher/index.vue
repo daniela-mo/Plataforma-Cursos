@@ -64,9 +64,11 @@
       span {
         font-size: 32px;
         line-height: 150%;
+        font-family: Helvetica;
       }
       p {
         font-size: 16px;
+        font-weight: normal;
       }
       &__icons {
         display: flex;
