@@ -53,7 +53,7 @@ export default {
     display: flex;
     justify-content: space-between;
     max-width: 1170px;
-    padding: 80px 0;
+    padding: 90px 0;
     margin: 0 auto;
     width: 100%;
     &__content {
@@ -107,12 +107,25 @@ export default {
   }
 
   @media (max-width: 768px) {
+    width: 100%;
     .home-top {
       flex-direction: column;
       width: 90%;
-      height: 900px;
+      height: 600px;
       &__img {
         display: none;
+      }
+      &__content {
+        &__h1 {
+          width: 480px;
+        }
+        &__p {
+          width: 480px;
+        }
+        &__button {
+          font-size: 15px;
+          padding: 17px 12px;
+        }
       }
     }
   }

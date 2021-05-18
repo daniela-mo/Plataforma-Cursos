@@ -14,7 +14,7 @@
 
 <script>
 import Carousel from "./Carousel";
-import commit from "@/uteis/commit";
+import commit from "@/utils/commit";
 export default {
   components: {
     Carousel,
@@ -77,6 +77,15 @@ export default {
     &__points {
       width: 52px;
       height: 12px;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+    flex-direction: column;
+    &__content {
+      &__carousel {
+        flex-direction: column;
+      }
     }
   }
 }

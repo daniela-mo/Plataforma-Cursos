@@ -93,6 +93,9 @@
       }
     }
   }
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 }
 .footer-copyright {
   display: flex;
@@ -102,5 +105,9 @@
   max-width: 1170px;
   margin: 0px auto;
   padding: 70px 0 15px 0;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 }
 </style>

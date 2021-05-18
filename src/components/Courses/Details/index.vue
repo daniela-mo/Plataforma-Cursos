@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import details from "@/uteis/details";
+import details from "@/utils/details";
 export default {
   data: () => ({
     details: [],

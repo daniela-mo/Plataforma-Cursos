@@ -22,7 +22,7 @@
 
 <script>
 import Cards from "./Cards";
-import cursos from "@/uteis/cursos";
+import cursos from "@/utils/cursos";
 export default {
   components: {
     Cards,
@@ -88,6 +88,13 @@ export default {
       width: 100%;
       justify-content: space-between;
       align-items: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    &__text {
+      width: 680px;
     }
   }
 }

@@ -32,13 +32,8 @@ const details = [
   {
     id: 6,
     title: "6. Autenticação com biometria",
-    appresent: [
-      "Apresentação",
-      "Preparando o projeto",
-      "Área do formulário",
-      "Campos de login",
-    ],
+    appresent:
+      " Apresentação,  Preparando o projeto,  Área do formulário, Campos de login ",
   },
 ];
-
 export default details;

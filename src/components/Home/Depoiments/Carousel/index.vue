@@ -36,6 +36,10 @@ export default {
   align-items: center;
   max-width: 1170px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .item-content__carousel {
@@ -80,6 +84,11 @@ export default {
         color: #fcc419;
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 30px;
+    width: 464px;
   }
 }
 </style>

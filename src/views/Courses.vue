@@ -56,7 +56,7 @@ import Topics from "@/components/Courses/Topics";
 import Details from "@/components/Courses/Details";
 import Briefing from "@/components/Courses/Briefing";
 import Teacher from "@/components/Courses/Teacher";
-import details from "@/uteis/details";
+import details from "@/utils/details";
 
 export default {
   components: {
@@ -103,6 +103,9 @@ export default {
   p {
     margin-right: 8px;
   }
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 }
 .courses-top__nav__back {
   margin-right: 8px;
@@ -115,7 +118,6 @@ export default {
   padding: 60px 0;
   margin: 0 auto;
   width: 100%;
-
   &__course {
     display: flex;
     justify-content: space-between;
@@ -126,7 +128,6 @@ export default {
       flex-direction: column;
       align-items: flex-start;
       width: 40%;
-
       h2 {
         color: var(--color-white);
         font-family: Inter;
@@ -161,7 +162,6 @@ export default {
       color: var(--color-black);
       font-size: 14px;
       padding: 15px 10px;
-
       font-weight: 600;
       margin-top: 20px;
       border: none;
@@ -175,6 +175,21 @@ export default {
       }
     }
   }
+  @media (max-width: 768px) {
+    width: 90%;
+    &__course {
+      &__text {
+        width: 500px;
+      }
+      &__button {
+        font-size: 15px;
+        padding: 17px 12px;
+      }
+    }
+    img {
+      display: none;
+    }
+  }
 }
 .micro {
   display: flex;
@@ -182,7 +197,12 @@ export default {
   padding: 80px 0;
   margin: 0 auto;
   width: 100%;
-  display: flex;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    align-items: column;
+    flex-direction: column;
+  }
 }
 </style>

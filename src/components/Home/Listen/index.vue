@@ -111,5 +111,21 @@ export default {};
       }
     }
   }
+  @media (max-width: 768px) {
+    width: 90%;
+    &__feather {
+      width: 90%;
+      &__items {
+        width: 500px;
+
+        &__img {
+          margin-right: 20px;
+        }
+        &__text {
+          width: 380px;
+        }
+      }
+    }
+  }
 }
 </style>

@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import faq from "@/uteis/faq";
+import faq from "@/utils/faq";
 export default {
   data: () => ({
     itens: [],
@@ -151,6 +151,12 @@ export default {
           }
         }
       }
+    }
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+    &__content {
+      width: 530px;
     }
   }
 }

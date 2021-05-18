@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="home-benefits__content__description">
-        <div class="benefits__content__description__img">
+        <div class="home-benefits__content__description__img">
           <img src="@/assets/calendar.svg" />
         </div>
         <div class="home-benefits__content__description__text">
@@ -79,6 +79,26 @@
           font-size: 14px;
           line-height: 150%;
           color: #bcbcbc;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    width: 90%;
+
+    align-items: center;
+    &__content {
+      flex-direction: column;
+      &__description {
+        margin-top: 20px;
+        &__text {
+          width: 290px;
+          span {
+            font-size: 24px;
+          }
+          p {
+            font-size: 20px;
+          }
         }
       }
     }

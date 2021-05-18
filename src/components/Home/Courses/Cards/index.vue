@@ -49,6 +49,10 @@ export default {
   align-items: center;
   width: 100%;
   max-width: 1170px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
 }
 .item-content__card {
   width: 364px;
@@ -134,6 +138,16 @@ export default {
       text-decoration: none;
       border-radius: 8px;
       border: none;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 464px;
+    margin-bottom: 25px;
+    &__bottom {
+      &__button {
+        margin-left: 60px;
+        width: 254px;
+      }
     }
   }
 }
